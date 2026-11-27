@@ -1,10 +1,22 @@
-# Syllabus
+# Syllabus | Подготовка и согласование силлабусов
 
-Published frontend: https://dante-sys.github.io/syllabus-site/
+Веб-приложение для преподавателей и согласующих Satbayev University. В одном рабочем процессе можно заполнить форму силлабуса, сохранить черновик, отправить документ на согласование и скачать итоговый Word.
 
-This repository contains the compiled website only. The API runs separately on Render; credentials are stored on the server.
+**[Открыть демо](https://dante-sys.github.io/syllabus-site/)**
 
-Source: https://github.com/Dante-sys/Syllabus-SU (published from a246380).
-API: https://syllabus-su.onrender.com
+## Что посмотреть в демо
 
-Build the source with VITE_API_URL=https://syllabus-su.onrender.com before copying the generated index.html and assets here. Frontend changes must be published to this repository as well as the API repository; deploying Render alone does not update GitHub Pages.
+1. Выберите тестовую роль преподавателя по подсказке на странице входа.
+2. Откройте дисциплину, создайте тестовый силлабус и проверьте редактор с навигацией по 13 разделам.
+3. Посмотрите, как устроены отправка на согласование, замечания и история решений.
+
+Используйте вымышленные данные. Демо не использует университетскую учётную запись.
+
+## Как устроено приложение
+
+- **Интерфейс:** React, TypeScript и Vite; опубликован на GitHub Pages.
+- **Сервер:** Node.js, Fastify и REST API; развёрнут отдельно от интерфейса.
+- **Хранение:** PostgreSQL для учётных записей, документов и версий согласования.
+- **Вход:** в демо используются тестовые роли; проект поддерживает подключение университетского входа по OpenID Connect.
+
+Этот публичный репозиторий содержит только собранный интерфейс. Исходники приложения и серверная конфигурация в него не входят.
